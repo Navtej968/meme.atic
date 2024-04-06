@@ -1,4 +1,5 @@
 from memeGenerator import ScrapMemes
+from stay_online import keep_alive
 from ensta import Host
 import requests
 from PIL import Image
@@ -21,6 +22,7 @@ def upload_meme(caption):
   upload_id = host.get_upload_id("meme.jpg")
   host.upload_photo(upload_id ,caption)
 def main():
+  keep_alive()
   while(True):
     try:
       caption = get_meme()
