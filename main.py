@@ -26,8 +26,8 @@ def main():
   while(True):
       caption = get_meme()
       upload_meme(caption)
-      time.sleep(3000)
       print("Posted")
+      time.sleep(3000)
 
 
 
