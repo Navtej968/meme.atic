@@ -24,10 +24,12 @@ def upload_meme(caption):
 def main():
   keep_alive()
   while(True):
+    try:
       caption = get_meme()
       upload_meme(caption)
-      print("Posted")
       time.sleep(3000)
+    except Exception as e:
+      main()
 
 
 
